@@ -1,0 +1,27 @@
+{
+  "_comment": "AVGVSTO Business — Silent Deployment Config",
+  "_instructions": [
+    "Place this file next to .exe",
+    "AVGVSTO will load it automatically at startup.",
+    "Remove any key you don't want to pre-configure.",
+    "Delete this file to return to interactive setup."
+  ],
+
+  "usb_id": "",
+  "_usb_id_help": "Pre-bind a specific USB key by its SHA-256 ID (get it from USB KEY BINDING section). Leave empty for interactive binding.",
+
+  "max_attempts": 5,
+  "_max_attempts_help": "Default attempt limit for all encryptions. 0 = unlimited.",
+
+  "default_cipher": "aes",
+  "_default_cipher_help": "Default encryption algorithm: 'aes', 'chacha20', or 'cascade'.",
+
+  "org_name": "RPX TITLE",
+  "_org_name_help": "Shown in the title bar and audit log.",
+
+  "disable_portable_flag": false,
+  "_disable_portable_help": "Set true to prevent users from enabling portable mode.",
+
+  "audit_log_path": "",
+  "_audit_log_path_help": "Override audit log location (e.g. a shared network path). Leave empty to use default (~/.avgvsto/audit.log)."
+}

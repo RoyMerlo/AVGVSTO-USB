@@ -1,0 +1,5 @@
+pycryptodome
+psutil
+tkinterdnd2
+Pillow
+pystray
