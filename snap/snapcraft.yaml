@@ -1,0 +1,30 @@
+name: avgvsto
+version: '3.1.3'
+summary: Hardware-bound AES-256-GCM encryption suite
+description: |
+  AVGVSTO fuses your password with the physical fingerprint
+  of any USB drive. Without the exact hardware, decryption
+  is mathematically impossible — even if the password is known.
+  Anti-bruteforce, duress mode, 100% offline.
+
+grade: stable
+confinement: classic
+base: core22
+
+apps:
+  avgvsto:
+    command: bin/avgvsto
+    plugs:
+      - home
+      - removable-media
+
+parts:
+  avgvsto:
+    plugin: python
+    source: .
+    python-packages:
+      - pycryptodome
+      - psutil
+      - tkinterdnd2
+      - Pillow
+      - pystray
